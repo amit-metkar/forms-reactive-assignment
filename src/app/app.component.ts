@@ -30,12 +30,12 @@ export class AppComponent implements OnInit {
         'projectName': new FormControl(null, [Validators.required], [this.validateProjectName]),
         'email': new FormControl(null, [Validators.required, Validators.email])
       }),
-      'status': new FormControl(null)
+      'status': new FormControl('Critical')
     });
 
-    this.projectForm.patchValue({
-      'status': 'Stable'
-    });
+    // this.projectForm.patchValue({
+    //   'status': 'Stable'
+    // });
   }
 
   validateProject(control: FormControl): {
